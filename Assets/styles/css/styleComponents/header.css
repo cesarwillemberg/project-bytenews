@@ -1,0 +1,31 @@
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;         
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;  
+    background-color: #205BA9; 
+    color: white;
+    height: 6rem;
+}
+
+.title {
+    flex-grow: 1;                  
+    text-align: center;         
+}
+
+h1 {
+    margin: 0;
+}
+
+.icons {
+    display: flex;                 
+    gap: 15px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}

@@ -7,163 +7,88 @@
     <link rel="stylesheet" href="./Assets/styles/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="title">
-            <h1><strong>ByteNews.com</strong></h1>
-        </div>
-        <div class="icons">
-            <img src="/Assets/imgs/search.png" alt="Buscar" class="icon">
-            <img src="/Assets/imgs/barra.png" alt="Buscar" class="icon">
-            <img src="/Assets/imgs/user.png" alt="Perfil" class="icon">
-        </div>
-    </header>
-    <nav class="navbar">
-        <button class="hamburger" aria-label="Menu">
-            ☰
-        </button>
-        <ul class="nav-links">
-            <li><a href="#" class="blue">Home</a></li>
-            <li><a href="#">Brasil</a></li>
-            <li><a href="#">Internacional</a></li>
-            <li><a href="#">Tecnologia</a></li>
-            <li><a href="#">Saúde</a></li>
-            <li><a href="#">Ciência</a></li>
-            <li><a href="#">Economia</a></li>
-            <li class="hidden" ><a href="#">Cadastrar E-mail</a></li>
-            <li class="hidden" ><a href="#">Pesquisar</a></li>
-        </ul>
-    </nav>
-    
+    <header-tag></header-tag>
+    <!-- <div class="header-container"></div> -->
+    <!-- <div class="navbar-container"></div> -->
+    <navbar-tag
+        data-item1="Home" data-link1="/index.html"
+        data-item2="Brasil" data-link2="/pages/brasil.html"
+        data-item3="Internacional" data-link3="/pages/internacional.html"
+        data-item4="Tecnologia" data-link4="/pages/tecnologia.html"
+        data-item5="Saúde" data-link5="/pages/saude.html"
+        data-item6="Ciência" data-link6="/pages/ciencia.html"
+        data-item7="Economia" data-link7="/pages/economia.html"
+        data-item8="Cadastrar E-mail" data-link8="/cadastrar-email" data-hidden8="true"
+        data-item9="Pesquisar" data-link9="/pesquisar" data-hidden9="true"
+    ></navbar-tag>
     <main>
         <section class="highlights">
-            <div class="news-category-highlights">
-                <h2 class="tag-highlights">Brasil ></h2>
-                <div class="news-content-highlights">
-                    <img src="Assets/imgs/h1.png" alt="Noticia Brasil" class="img-noticia-brasil">
-                    <div class="texts-content-highlights">
-                        <h3 class="title-highlights">
-                            <strong>'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça
-                                das
-                                queimadas
-                                na saúde </strong>
-                        </h3>
-                        <p class="subtitle-highlights">
-                            De acordo com pneumologistas consultados pela BBC News Brasil, a fumaça contém materiais
-                            tóxicos, como dioxinas e metais pesados, além de partículas finas que podem ser
-                            inaladas, causando problemas respiratórios graves, sobretudo para quem já tem doenças
-                            pré-existentes.
-                        </p>
-                        <div class="data-time-highlights">
-                            <img src="Assets/imgs/h14.png" alt="Notícia Brasil" class="time">
-                            <span class="data-hora">25/08/2024 às 16:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="news-category-highlights">
-                <h2 class="tag-highlights">Brasil ></h2>
-                <div class="news-content-highlights">
-                    <img src="Assets/imgs/h2.png" alt="Noticia Brasil" class="img-noticia-brasil">
-                    <div class="texts-content-highlights">
-                        <h3 class="title-highlights">
-                            <strong>Incógnitas em torno do naufrágio do iate de luxo na Itália</strong>
-                        </h3>
-                        <p class="subtitle-highlights">
-                            O super iate de luxo transportava 22 pessoas quando uma forte tempestade que criou
-                            trombas d'água o atingiu na manhã de segunda-feira (19/8).
-                        </p>
-                        <div class="data-time-highlights">
-                            <img src="Assets/imgs/h14.png" alt="Notícia Brasil" class="time">
-                            <span class="data-hora">23/08/2024 às 11:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <news-card 
+                category="Brasil >" 
+                image="Assets/imgs/h1.png" 
+                imageAlt="Notícia Brasil" 
+                title="'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça das queimadas na saúde" 
+                subtitle="De acordo com pneumologistas consultados pela BBC News Brasil, a fumaça contém materiais tóxicos, como dioxinas e metais pesados, além de partículas finas que podem ser inaladas, causando problemas respiratórios graves, sobretudo para quem já tem doenças pré-existentes."
+                timeIcon="Assets/imgs/h14.png" 
+                datetime="25/08/2024 às 16:00">
+            </news-card>
+            <news-card 
+                category="Brasil >" 
+                image="Assets/imgs/h1.png" 
+                imageAlt="Notícia Brasil" 
+                title="'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça das queimadas na saúde" 
+                subtitle="De acordo com pneumologistas consultados pela BBC News Brasil, a fumaça contém materiais tóxicos, como dioxinas e metais pesados, além de partículas finas que podem ser inaladas, causando problemas respiratórios graves, sobretudo para quem já tem doenças pré-existentes."
+                timeIcon="Assets/imgs/h14.png" 
+                datetime="25/08/2024 às 16:00">
+            </news-card>
         </section>
 
         <section class="news-grid">
-            <div class="news-category">
-                <h2>Tecnologia ></h2>
-                <div class="news-item">
-                    <img src="/Assets/imgs/h3.png" alt="Notícia Tecnologia" class="img-noticia">
-                    <div class="news-content">
-                        <h3><strong>Como a China conseguiu evitar o pior do colapso tecnológico global</strong></h3>
-                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
-                        <span class="data-hora-grid"> 21/07/2024 às 17:00</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-category">
-                <h2>Saúde ></h2>
-                <div class="news-item">
-                    <img src="/Assets/imgs/h4.png" alt="Notícia Tecnologia" class="img-noticia">
-                    <div class="news-content">
-                        <h3><strong>Britânico é o primeiro a tomar nova vacina contra câncer no pulmão</strong></h3>
-                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
-                        <span class="data-hora-grid">23/08/2024 às 21:00</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-category">
-                <h2>Ciência ></h2>
-                <div class="news-item">
-                    <img src="/Assets/imgs/h5.png" alt="Notícia Tecnologia" class="img-noticia">
-                    <div class="news-content">
-                        <h3><strong>O cientista soviético que chocou o mundo com experimento que criou cães de 2
-                            cabeças</strong></h3>
-                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
-                        <span class="data-hora-grid">20/06/2024 às 15:30</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-category">
-                <h2>Economia ></h2>
-                <div class="news-item">
-                    <img src="/Assets/imgs/h6.png" alt="Notícia Tecnologia" class="img-noticia">
-                    <div class="news-content">
-                        <h3><strong>Os planos da Coreia do Norte de reabrir para turismo após 5 anos</strong></h3>
-                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
-                        <span class="data-hora-grid">24/08/2024 às 20:00</span>
-                    </div>
-                </div>
-            </div>
+            <news-category 
+                category="Tecnologia >"
+                image="/Assets/imgs/h3.png"
+                imageAlt="Notícia Tecnologia"
+                title="Como a China conseguiu evitar o pior do colapso tecnológico global"
+                timeIcon="/Assets/imgs/h14.png"
+                datetime="21/07/2024 às 17:00">
+            </news-category>
+        
+            <news-category 
+                category="Saúde >"
+                image="/Assets/imgs/h4.png"
+                imageAlt="Notícia Saúde"
+                title="Britânico é o primeiro a tomar nova vacina contra câncer no pulmão"
+                timeIcon="/Assets/imgs/h14.png"
+                datetime="23/08/2024 às 21:00">
+            </news-category>
+        
+            <news-category 
+                category="Ciência >"
+                image="/Assets/imgs/h5.png"
+                imageAlt="Notícia Ciência"
+                title="O cientista soviético que chocou o mundo com experimento que criou cães de 2 cabeças"
+                timeIcon="/Assets/imgs/h14.png"
+                datetime="20/06/2024 às 15:30">
+            </news-category>
+        
+            <news-category 
+                category="Economia >"
+                image="/Assets/imgs/h6.png"
+                imageAlt="Notícia Economia"
+                title="Os planos da Coreia do Norte de reabrir para turismo após 5 anos"
+                timeIcon="/Assets/imgs/h14.png"
+                datetime="24/08/2024 às 20:00">
+            </news-category>
         </section>
     </main>
-    <footer class="footer-container">
-        <div class="container-footer">
-            <p class="text-trust">Por que você pode confiar na ByteNews.com</p>
-            <hr>
-            <div class="inside-hr">
-                <div class="footer-content-links">
-                    <ul>
-                        <li><a href="#">Termos de uso</a></li>
-                        <li><a href="#">Sobre a ByteNews.com</a></li>
-                        <li><a href="#">Política de privacidade</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-                <div class="social-icons">
-                    <ul>
-                        <li><a href="#"><img src="/Assets/imgs/iconeFACE.png" alt="Facebook"></a></li>
-                        <li><a href="#"><img src="/Assets/imgs/iconeX.png" alt="Twitter"></a></li>
-                        <li><a href="#"><img src="/Assets/imgs/iconeGIT.png" alt="Instagram"></a></li>
-                        <li><a href="#"><img src="/Assets/imgs/iconeGOOGLE.png" alt="Google"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="footer-note">
-                <p>
-                    © 2024 ByteNews.com. A ByteNews.com não se responsabiliza pelo conteúdo de
-                    sites externos. Leia sobre nossa política em relação a <strong class="external-links">links externos</strong>. 
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- <div class="footer-container-2"></div> -->
+    <footer-tag></footer-tag>
 
     <script src="/Assets/javascript/index.js"></script>
+    <script src="/Assets/javascript/components/header/headerTag.js"></script>
+    <script src="/Assets/javascript/components/footer/footerTag.js"></script>
+    <script src="/Assets/javascript/components/navbar/navbarTag.js"></script>
+    <script src="/Assets/javascript/components/card/newsCard.js"></script>
+    <script src="/Assets/javascript/components/newsCategory/newsCategory.js"></script>
 </body>
 </html>

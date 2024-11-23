@@ -1,0 +1,165 @@
+                <div class="news-category-highlights">
+                <h2 class="tag-highlights">Brasil ></h2>
+                <div class="news-content-highlights">
+                    <img src="Assets/imgs/h1.png" alt="Noticia Brasil" class="img-noticia-brasil">
+                    <div class="texts-content-highlights">
+                        <h3 class="title-highlights">
+                            <strong>'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça
+                                das
+                                queimadas
+                                na saúde </strong>
+                        </h3>
+                        <p class="subtitle-highlights">
+                            De acordo com pneumologistas consultados pela BBC News Brasil, a fumaça contém materiais
+                            tóxicos, como dioxinas e metais pesados, além de partículas finas que podem ser
+                            inaladas, causando problemas respiratórios graves, sobretudo para quem já tem doenças
+                            pré-existentes.
+                        </p>
+                        <div class="data-time-highlights">
+                            <img src="Assets/imgs/h14.png" alt="Notícia Brasil" class="time">
+                            <span class="data-hora">25/08/2024 às 16:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-category-highlights">
+                <h2 class="tag-highlights">Brasil ></h2>
+                <div class="news-content-highlights">
+                    <img src="Assets/imgs/h2.png" alt="Noticia Brasil" class="img-noticia-brasil">
+                    <div class="texts-content-highlights">
+                        <h3 class="title-highlights">
+                            <strong>Incógnitas em torno do naufrágio do iate de luxo na Itália</strong>
+                        </h3>
+                        <p class="subtitle-highlights">
+                            O super iate de luxo transportava 22 pessoas quando uma forte tempestade que criou
+                            trombas d'água o atingiu na manhã de segunda-feira (19/8).
+                        </p>
+                        <div class="data-time-highlights">
+                            <img src="Assets/imgs/h14.png" alt="Notícia Brasil" class="time">
+                            <span class="data-hora">23/08/2024 às 11:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+<header class="header">
+        <div class="title">
+            <h1><strong>ByteNews.com</strong></h1>
+        </div>
+        <div class="icons">
+            <img src="/Assets/imgs/search.png" alt="Buscar" class="icon">
+            <img src="/Assets/imgs/barra.png" alt="Buscar" class="icon">
+            <img src="/Assets/imgs/user.png" alt="Perfil" class="icon">
+        </div>
+    </header>
+    
+<nav class="navbar">
+        <button class="hamburger" aria-label="Men u">
+            ☰
+        </button>
+        <ul class="nav-links">
+            <li><a href="#" class="blue">Home</a></li>
+            <li><a href="#">Brasil</a></li>
+            <li><a href="#">Internacional</a></li>
+            <li><a href="#">Tecnologia</a></li>
+            <li><a href="#">Saúde</a></li>
+            <li><a href="#">Ciência</a></li>
+            <li><a href="#">Economia</a></li>
+            <li class="hidden" ><a href="#">Cadastrar E-mail</a></li>
+            <li class="hidden" ><a href="#">Pesquisar</a></li>
+        </ul>
+    </nav>    
+
+
+
+
+<footer class="footer-container">
+        <div class="container-footer">
+            <p class="text-trust">Por que você pode confiar na ByteNews.com</p>
+            <hr>
+            <div class="inside-hr">
+                <div class="footer-content-links">
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Sobre a ByteNews.com</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#"><img src="/Assets/imgs/iconeFACE.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="/Assets/imgs/iconeX.png" alt="Twitter"></a></li>
+                        <li><a href="#"><img src="/Assets/imgs/iconeGIT.png" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="/Assets/imgs/iconeGOOGLE.png" alt="Google"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-note">
+                <p>
+                    © 2024 ByteNews.com. A ByteNews.com não se responsabiliza pelo conteúdo de
+                    sites externos. Leia sobre nossa política em relação a <strong class="external-links">links externos</strong>. 
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+            <div class="news-category">
+                <h2>Tecnologia ></h2>
+                <div class="news-item">
+                    <img src="/Assets/imgs/h3.png" alt="Notícia Tecnologia" class="img-noticia">
+                    <div class="news-content">
+                        <h3><strong>Como a China conseguiu evitar o pior do colapso tecnológico global</strong></h3>
+                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
+                        <span class="data-hora-grid"> 21/07/2024 às 17:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-category">
+                <h2>Saúde ></h2>
+                <div class="news-item">
+                    <img src="/Assets/imgs/h4.png" alt="Notícia Tecnologia" class="img-noticia">
+                    <div class="news-content">
+                        <h3><strong>Britânico é o primeiro a tomar nova vacina contra câncer no pulmão</strong></h3>
+                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
+                        <span class="data-hora-grid">23/08/2024 às 21:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-category">
+                <h2>Ciência ></h2>
+                <div class="news-item">
+                    <img src="/Assets/imgs/h5.png" alt="Notícia Tecnologia" class="img-noticia">
+                    <div class="news-content">
+                        <h3><strong>O cientista soviético que chocou o mundo com experimento que criou cães de 2
+                            cabeças</strong></h3>
+                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
+                        <span class="data-hora-grid">20/06/2024 às 15:30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-category">
+                <h2>Economia ></h2>
+                <div class="news-item">
+                    <img src="/Assets/imgs/h6.png" alt="Notícia Tecnologia" class="img-noticia">
+                    <div class="news-content">
+                        <h3><strong>Os planos da Coreia do Norte de reabrir para turismo após 5 anos</strong></h3>
+                        <img src="/Assets/imgs/h14.png" alt="Notícia Tecnologia" class="time">
+                        <span class="data-hora-grid">24/08/2024 às 20:00</span>
+                    </div>
+                </div>
+            </div>
