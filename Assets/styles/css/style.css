@@ -3,6 +3,8 @@
 @import './styleComponents/footer.css';
 @import './styleComponents/newsCard.css';
 @import './styleComponents/newsCategory.css';
+@import './styleComponents/mostRead.css';
+@import './styleComponents/newsHeader.css';
 
 * {
     box-sizing: border-box;

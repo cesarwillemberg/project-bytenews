@@ -163,3 +163,57 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+                    <article class="article-final"> 
+            <div class="div-container-maislidas">
+                <div class="text-mais-lidas">
+                    <h3><strong>MAIS LIDAS</strong></h3>
+                </div>
+                <div class="numbers-mais-lidas">
+                    <div class="container-number">
+                        <div class="number">
+                            <img src="/Assets/imgs/num1.png" alt="Imagem ilustrativa da matéria" class="article-image">
+                        </div>
+                        <p>
+                            'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça
+                            das
+                            queimadas na saúde
+                        </p>
+                    </div>
+                    <div class="container-number">
+                        <div class="number">
+                            <figure>
+                                <img src="/Assets/imgs/num2.png" alt="Imagem ilustrativa da matéria" class="article-image">
+                            </figure>
+                        </div>
+                        <p>Britânico é o primeiro a tomar nova vacina contra câncer no pulmão</p>
+                    </div>
+                    <div class="container-number">
+                        <div class="number">
+                            <figure>
+                                <img src="/Assets/imgs/num3.png" alt="Imagem ilustrativa da matéria"
+                                    class="article-image">
+                            </figure>
+                        </div>
+                        <p>4 incógnitas em torno do naufrágio do iate de luxo na Itália</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="news-title">
+            <h2>
+                <strong>'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça das queimadas na saúde</strong>
+            </h2>
+        </div>
+        <div class="author-info-container">
+            <div class="container-info-author">
+                <p class="author-info">
+                    Por Bianca Dahmer, César Willemberg e Mayara Meotti da ByteNews, em Ijuí <br>
+                    25/08/2024 às 16:00 | Atualizado 25/08/2024 às 16:23
+                </p>
+            </div>
+        </div>
