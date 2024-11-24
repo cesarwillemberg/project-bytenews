@@ -29,3 +29,17 @@ h1 {
     height: 30px;
     object-fit: contain;
 }
+
+@media (max-width: 660px) {
+    .icons {
+        display: none;
+    }
+
+    .title {
+        display: flex !important;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+}

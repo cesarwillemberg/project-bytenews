@@ -3,7 +3,6 @@
     height: auto;
     padding: 1rem;
     margin: 2rem 0;
-    /* flex: 1 1 calc(33.333% - 5px); */
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -42,6 +41,10 @@
     margin-bottom: 4rem;
 }
 
+.news-content {
+    text-align: justify;
+}
+
 .data-hora {
     font-size: 16px;
     color: #000;
@@ -50,4 +53,101 @@
 .time {
     width: 5%;
     margin-right: 5px;
+}
+
+@media (max-width: 1440px) {
+    .title-highlights {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle-highlights {
+        font-size: 12px;
+        margin-bottom: 3rem;
+    }
+
+    .news-content > h3 > strong {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1281px) {
+    .title-highlights {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle-highlights {
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .news-content > h3 > strong {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 1025px) {
+    .title-highlights {
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle-highlights {
+        font-size: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .news-content > h3 > strong {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-category-highlights {
+        width: 90%;
+    }
+    .title-highlights {
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle-highlights {
+        font-size: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .news-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .news-category {
+    }
+
+    .news-content > h3 > strong {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 660px) {
+}
+
+@media (max-width: 480px) {
+    .title-highlights {
+        font-size: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+    .subtitle-highlights {
+        display: none;
+    }
+
+    .news-content > h3 > strong {
+        font-size: 1rem;
+    }
+    
+
 }

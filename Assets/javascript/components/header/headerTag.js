@@ -10,6 +10,17 @@ class HeaderTag extends HTMLElement {
         const styles = this.styles();
         shadow.appendChild(styles);
         shadow.appendChild(header);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                this.openUserModal();
+            }, 1000 * 60);
+
+            setInterval(() => {
+                this.openUserModal();
+            }, 1000 * 360);
+        });
+
     }
 
     createHeader() {
@@ -18,9 +29,9 @@ class HeaderTag extends HTMLElement {
         const h1 = document.createElement('h1');
         const divIcons = document.createElement('div');
         const icons = [
-            { src: '/Assets/imgs/search.png', alt: 'Buscar' },
-            { src: '/Assets/imgs/barra.png', alt: 'Buscar' },
-            { src: '/Assets/imgs/user.png', alt: 'Perfil' }
+            { src: '/Assets/imgs/search.png', alt: 'Buscar', id: 'searchIcon' },
+            { src: '/Assets/imgs/barra.png', alt: 'Buscar', id: 'barraIcon' },
+            { src: '/Assets/imgs/user.png', alt: 'Perfil', id: 'userIcon' }
         ];
 
         header.className = 'header';
@@ -35,6 +46,12 @@ class HeaderTag extends HTMLElement {
             img.src = icon.src;
             img.alt = icon.alt;
             img.className = 'icon';
+            img.id = icon.id;
+
+            if (icon.id == 'userIcon') {
+                img.addEventListener('click', this.openUserModal.bind(this));
+            }
+
             divIcons.appendChild(img);
         });
 
@@ -42,6 +59,13 @@ class HeaderTag extends HTMLElement {
         header.appendChild(divIcons);
 
         return header;
+    }
+
+    openUserModal() {
+        const modal = document.querySelector('modal-component');
+        if (modal) {
+            modal.openModal();
+        }
     }
 
     // styles() {

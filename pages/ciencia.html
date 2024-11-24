@@ -16,20 +16,27 @@
         data-item5="Saúde" data-link5="/pages/saude.html"
         data-item6="Ciência" data-link6="/pages/ciencia.html"
         data-item7="Economia" data-link7="/pages/economia.html"
-        data-item8="Cadastrar E-mail" data-link8="/cadastrar-email" data-hidden8="true"
-        data-item9="Pesquisar" data-link9="/pesquisar" data-hidden9="true"
+        data-item8="Cadastrar E-mail" data-link8="/cadastrar-email" data-hidden8="true" data-id8="modal-cadastar-email-hamburguer"
+        data-item9="Pesquisar" data-link9="/pesquisar" data-hidden9="true" data-id9="search"
     ></navbar-tag>
+
+    <modal-component 
+        id="modal-cadastar-email" 
+        title="ByteNews.com" 
+        heading="Registrar-se para receber notificações" 
+        iconSrc="/Assets/imgs/user.png"
+    ></modal-component>
 
     <main>
         <article class="article">
             <news-header 
-                title="'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça das queimadas na saúde"
-                authorInfo="Por Bianca Dahmer, César Willemberg e Mayara Meotti da ByteNews, em Ijuí <br> 25/08/2024 às 16:00 | Atualizado 25/08/2024 às 16:23">
-            </news-header>
+                title="'O cientista soviético que chocou o mundo com experimento que criou cães de 2 cabeças"
+                authorInfo="Por Bianca Dahmer, César Willemberg e Mayara Meotti da ByteNews, em Ijuí <br> 20/08/2024 às 15:30 | Atualizado 20/08/2024 às 15:42"
+            ></news-header>
         </article>
 
-        <article class="">
-
+        <article class="article">
+            
 
         </article>
 
@@ -55,5 +62,6 @@
     <script src="/Assets/javascript/components/navbar/navbarTag.js"></script>
     <script src="/Assets/javascript/components/mostRead/mostReadTag.js"></script>
     <script src="/Assets/javascript/components/newsHeader/newsHeader.js"></script>
+    <script src = '/Assets/javascript/components/modalComponetCadastrar/modalComponentCadastrar.js'></script>
 </body>
 </html>

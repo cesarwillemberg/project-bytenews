@@ -33,7 +33,8 @@ class NavbarTag extends HTMLElement {
             const itemText = this.getAttribute(`data-item${i}`);
             const itemLink = this.getAttribute(`data-link${i}`);
             const isHidden = this.hasAttribute(`data-hidden${i}`)
-            navItems.push({ text: itemText, href: itemLink, hidden: isHidden });
+            const idCurrent = this.getAttribute(`data-id${i}`);
+            navItems.push({ text: itemText, href: itemLink, hidden: isHidden, id: idCurrent });
             i++;
         }
 
@@ -49,6 +50,21 @@ class NavbarTag extends HTMLElement {
             if (currentUrl.includes(item.href)) {
                 a.classList.add('blue');
             }
+
+            if (item.id === 'modal-cadastar-email-hamburguer') {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.openUserModalCadastar(); 
+                }); 
+            }
+
+            if (item.id === 'search') {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.openUserModalSearch(); 
+                }); 
+            }
+
             li.appendChild(a);
             ul.appendChild(li);
         });
@@ -57,6 +73,23 @@ class NavbarTag extends HTMLElement {
         nav.appendChild(ul);
 
         return nav;
+    }
+
+    openUserModalCadastar() {
+        const modal = document.querySelector('modal-component');
+        if (modal) {
+            modal.openModal();
+        }
+    }
+
+    openUserModalSearch() {
+        const modal = document.querySelector('modal-component-search');
+        if (modal) {
+            modal.openModal();
+        } else {
+            console.log('modal nao encontrado');
+            
+        }
     }
 
     styles() {

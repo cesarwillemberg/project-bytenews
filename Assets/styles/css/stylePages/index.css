@@ -18,59 +18,13 @@ news-card {
     margin: 2% 10%;
 }
 
-
 @media (max-width: 1441px) {
-    .title-highlights {
-        font-size: 20px;
-    }
-    
-    .subtitle-highlights {
-        font-size: 12px;
-        margin-bottom: 2.5rem;
-    }
-    .data-hora {
-        font-size: 12px;
-    }
-
-    .news-content h3 {
-        font-size: 15px;
-    }
 }
 
 @media (max-width: 1281px) {    
-    .title-highlights {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .subtitle-highlights {
-        font-size: 0.8rem;
-    }
-
-    .news-content h3 {
-        font-size: 13px;
-    }
 }
 
 @media (max-width: 1025px) {
-
-    .tag-highlights {
-        font-size: 14px;
-    }
-
-    .news-category-highlights {
-        width: 90%;
-    }
-
-    .subtitle-highlights {
-        font-size: 10px;
-        margin-bottom: 1rem;
-    }
-
-    .news-grid {
-        width: 90%;
-        margin: 3% 5%;
-    }
 }
 
 @media (max-width: 768px) {
