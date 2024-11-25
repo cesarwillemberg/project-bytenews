@@ -14,13 +14,11 @@ class HeaderTag extends HTMLElement {
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 this.openUserModal();
+                setInterval(() => {
+                    this.openUserModal();
+                }, 1000 * 300);
             }, 1000 * 60);
-
-            setInterval(() => {
-                this.openUserModal();
-            }, 1000 * 360);
         });
-
     }
 
     createHeader() {
@@ -52,6 +50,10 @@ class HeaderTag extends HTMLElement {
                 img.addEventListener('click', this.openUserModal.bind(this));
             }
 
+            if (icon.id == 'searchIcon') {
+                img.addEventListener('click', this.openModalSearch.bind(this));
+            }
+
             divIcons.appendChild(img);
         });
 
@@ -63,6 +65,13 @@ class HeaderTag extends HTMLElement {
 
     openUserModal() {
         const modal = document.querySelector('modal-component');
+        if (modal) {
+            modal.openModal();
+        }
+    }
+
+    openModalSearch() {
+        const modal = document.querySelector('modal-component-search');
         if (modal) {
             modal.openModal();
         }

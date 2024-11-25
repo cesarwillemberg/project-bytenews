@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteNews.com</title>
     <link rel="stylesheet" href="/Assets//styles/css/stylePages/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Assets/styles/css/style.css">
 </head>
 <body>
@@ -27,6 +28,11 @@
         heading="Registrar-se para receber notificações" 
         iconSrc="/Assets/imgs/user.png"
     ></modal-component>
+
+    <modal-component-search
+        id="modal-search"
+        title="Pesquisar Noticias"
+    ></modal-component-search>
 
     <main>
         <section class="highlights">
@@ -96,6 +102,7 @@
     <script src="/Assets/javascript/components/navbar/navbarTag.js"></script>
     <script src="/Assets/javascript/components/card/newsCard.js"></script>
     <script src="/Assets/javascript/components/newsCategory/newsCategory.js"></script>
+    <script src = '/Assets/javascript/components/modalComponentSearch/ComponentSearch.js'></script>
     <script src = '/Assets/javascript/components/modalComponetCadastrar/modalComponentCadastrar.js'></script>
 </body>
 </html>

@@ -35,7 +35,7 @@ button:hover {
   padding: 30px;
   border-radius: 15px;
   width: 100%;
-  max-width: 900px; /* Modal maior */
+  max-width: 900px;
   text-align: center;
   position: relative;
 }

@@ -48,7 +48,7 @@ class ModalComponent extends HTMLElement {
     }
 
     setupModalEvents(modal, closeButton) {
-        const openModalButton = document.getElementById("openModal");
+        const openModalButton = document.getElementById("userIcon");
         if (openModalButton) {
             openModalButton.addEventListener("click", () => {
                 modal.classList.remove("close");

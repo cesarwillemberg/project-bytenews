@@ -6,6 +6,7 @@
 @import './styleComponents/mostRead.css';
 @import './styleComponents/newsHeader.css';
 @import './styleComponents/modalComponentCadastrar.css';
+@import './styleComponents/modalComponentSearch.css';
 
 * {
     box-sizing: border-box;
