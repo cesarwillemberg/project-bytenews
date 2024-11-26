@@ -42,6 +42,13 @@ class ModalComponent extends HTMLElement {
         const modal = this.shadowRoot.querySelector('.modal');
         modal.classList.remove('open');
         modal.classList.add('close');
+
+        const form = modal.querySelector('form');
+        if (form) {
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(input => input.value = '');
+        }
+
         setTimeout(() => {
             modal.style.display = 'none';
         }, 500);
@@ -103,6 +110,32 @@ class ModalComponent extends HTMLElement {
         return formContainer;
     }
 
+    createFetchPost(username, email) {
+        const id = this.generateRandomId();
+        const userData = { id, username, email };
+
+        fetch('http://localhost:3000/user/register/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Usuário registrado com sucesso:', data);
+            this.closeModal();
+            localStorage.setItem('shouldOpenModal', 'false');
+        })
+        .catch((error) => {
+            console.error('Erro ao registrar usuário:', error);
+        })
+    }
+
+    generateRandomId() {
+        return Math.floor(Math.random() * 10000000000000000) + 1;
+    }
+
     createFormElements() {
         const container = document.createElement('div');
         container.setAttribute('class', 'conteinr');
@@ -136,13 +169,22 @@ class ModalComponent extends HTMLElement {
 
     createForm() {
         const form = document.createElement('form');
-        form.appendChild(this.createFormInput('nome', 'Nome Completo', 'text', 'Nome completo'));
-        form.appendChild(this.createFormInput('email', 'Email', 'email', 'Email'));
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username =  form.querySelector('input[name="username"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+
+            this.createFetchPost(username, email);
+        })
+
+        form.appendChild(this.createFormInput('nome', 'Nome Completo', 'text', 'Nome completo', 'username'));
+        form.appendChild(this.createFormInput('email', 'Email', 'email', 'Email', 'email'));
         form.appendChild(this.createSubmitButton());
         return form;
     }
 
-    createFormInput(id, label, type, placeholder) {
+    createFormInput(id, label, type, placeholder, name) {
         const labelElement = document.createElement('label');
         labelElement.setAttribute('for', id);
         labelElement.innerHTML = `${label} <span style="color: red;">*</span>`;
@@ -151,6 +193,7 @@ class ModalComponent extends HTMLElement {
         input.setAttribute('type', type);
         input.setAttribute('id', id);
         input.setAttribute('placeholder', placeholder);
+        input.setAttribute('name', name)
         input.setAttribute('required', '');
 
         const container = document.createElement('div');

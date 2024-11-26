@@ -11,14 +11,18 @@ class HeaderTag extends HTMLElement {
         shadow.appendChild(styles);
         shadow.appendChild(header);
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                this.openUserModal();
-                setInterval(() => {
+        const shouldOpenModal = localStorage.getItem('shouldOpenModal') !== 'false';
+
+        if(shouldOpenModal) {
+            document.addEventListener('DOMContentLoaded', () => { 
+                setTimeout(() => {
                     this.openUserModal();
-                }, 1000 * 300);
-            }, 1000 * 60);
-        });
+                    setInterval(() => {
+                        this.openUserModal();
+                    }, 1000 * 10);
+                }, 1000 * 5);
+            });
+        }
     }
 
     createHeader() {
