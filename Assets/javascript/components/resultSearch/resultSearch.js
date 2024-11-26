@@ -9,12 +9,12 @@ class ResultSearch extends HTMLElement {
         const resultSearch = this.createResultSearch();
         const styles = this.styles();
 
-        const noResults = this.createNoResults();
+        // const noResults = this.createNoResults();
 
         shadow.appendChild(styles);
         shadow.appendChild(resultSearch);
 
-        shadow.appendChild(noResults);
+        // shadow.appendChild(noResults);
 
     }
 
@@ -52,10 +52,10 @@ class ResultSearch extends HTMLElement {
         const description = document.createElement('p');
         description.setAttribute('class', 'item-description');
 
-        if (!this.shadowRoot.querySelector('#no_results')) {
-            const noResults = this.createNoResults();
-            items.appendChild(noResults);
-        }
+        // if (!this.shadowRoot.querySelector('#no_results')) {
+        //     const noResults = this.createNoResults();
+        //     items.appendChild(noResults);
+        // }
 
         
 
@@ -77,17 +77,17 @@ class ResultSearch extends HTMLElement {
         return divResultSearch;
     }
 
-    createNoResults() {
-        const item_noresults = document.createElement('li');
-        item_noresults.setAttribute('id', 'no_results');
+    // createNoResults() {
+    //     const item_noresults = document.createElement('li');
+    //     item_noresults.setAttribute('id', 'no_results');
 
-        const no_results = document.createElement('p');
-        no_results.textContent = 'Nenhum resultado encontrado';
+    //     const no_results = document.createElement('p');
+    //     no_results.textContent = 'Nenhum resultado encontrado';
 
-        item_noresults.appendChild(no_results);
+    //     item_noresults.appendChild(no_results);
 
-        return item_noresults;
-    }
+    //     return item_noresults;
+    // }
 
     static get observedAttributes() {
         return ['data-title', 'data-img', 'data-subtitle', 'data-item-subtitle-text', 'data-description'];
