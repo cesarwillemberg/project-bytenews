@@ -82,6 +82,7 @@
 /* Result */
 
 .result-search {
+    display: none;
     width: 500px;
 }
 
@@ -143,4 +144,11 @@
     color: #666;
     display: flex;
     align-items: start;
+}
+
+
+#no_results {
+    display: none;
+    text-align: center;
+    color: #666;
 }

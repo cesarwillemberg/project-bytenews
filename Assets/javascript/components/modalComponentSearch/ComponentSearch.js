@@ -22,13 +22,11 @@ class ModalComponentSearch extends HTMLElement {
 
         modal.appendChild(modalContent);
 
-
-
         shadow.appendChild(styles);
         shadow.appendChild(modal);
 
         this.setupModalEvents(modal, closeButton);
-
+        this.searchNews();
 
     }
 
@@ -153,14 +151,21 @@ class ModalComponentSearch extends HTMLElement {
 
         const subtitle = document.createElement('p');
         subtitle.setAttribute('class', 'item-subtitle');
-        subtitle.innerHTML = '<i class="fa-regular fa-newspaper"></i>';
+        subtitle.innerHTML = '<i class="fa-regular fa-newspaper"></i> Noticia';
 
         const description = document.createElement('p');
         description.setAttribute('class', 'item-description');
         description.textContent = 'Descrição';
 
+        const item_noresults = document.createElement('li');
+        item_noresults.setAttribute('id', 'no_results');
 
+        const no_results = document.createElement('p');
+        no_results.textContent = 'Nenhum resultado encontrado';
 
+        item_noresults.appendChild(no_results);
+
+        
         itemImage.appendChild(image)
         item.appendChild(itemImage);
         itemContent.appendChild(title);
@@ -168,6 +173,7 @@ class ModalComponentSearch extends HTMLElement {
         itemContent.appendChild(description);
         item.appendChild(itemContent);
         items.appendChild(item);
+        items.appendChild(item_noresults);
 
         divResultSearch.appendChild(items);
 
@@ -176,24 +182,46 @@ class ModalComponentSearch extends HTMLElement {
         return divResultSearch;
     }
 
+
     searchNews() {
         const searchInput = this.shadowRoot.querySelector('#search');
 
         searchInput.addEventListener('input', (event) => {
-            const searchValue = event.target.value;
+            const searchValue = formatString(event.target.value);
             const items = this.shadowRoot.querySelectorAll('.items .item');
+            const noResults = this.shadowRoot.getElementById('no_results');
+            const resultSearch = this.shadowRoot.querySelector('.result-search');             
+            let hasResults = false;
 
-            items.forEach((item) => {
-                item.textContent.indexOf(searchValue)
-            })
+            if(searchValue != '') {
+                resultSearch.style.display = 'block';
+                items.forEach((item) => {
+                    const itemTitle = item.querySelector('.item-title').textContent;
+                    const itemDescription = item.querySelector('.item-description').textContent;
+                    if (formatString(itemTitle).indexOf(searchValue) !== -1 
+                    || formatString(itemDescription).indexOf(searchValue) !== -1) 
+                    {
+                        item.style.display = 'flex';
+                        hasResults = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                })
+            } else {
+                items.forEach((item) => item.style.display = 'flex');
+                resultSearch.style.display = 'none';
+                noResults.style.display = 'none';
+            }
 
-            // this.fetchNews(searchValue);
-
-
+            if (hasResults) {
+                noResults.style.display = 'none';
+            } else {
+                noResults.style.display = 'block';
+            }
         })
 
         function formatString(value) {
-            return value.toLowerCase().trim();
+            return value.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         }
 
     }
