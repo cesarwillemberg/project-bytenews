@@ -40,6 +40,14 @@ class ResultSearch extends HTMLElement {
         const title = document.createElement('h2');
         title.setAttribute('class', 'item-title');
 
+        // Adicionando o link ao título
+        const titleLink = document.createElement('a');
+        titleLink.setAttribute('class', 'item-title-link');
+        titleLink.setAttribute('href', '#');
+        titleLink.textContent = 'Título';
+        title.appendChild(titleLink);
+
+
         const divContentSubtitle = document.createElement('div');
         divContentSubtitle.setAttribute('class', 'divContentSubtitle');
 
@@ -61,7 +69,6 @@ class ResultSearch extends HTMLElement {
 
         
         itemImage.appendChild(image)
-
         item.appendChild(itemImage);
 
         itemContent.appendChild(title);
