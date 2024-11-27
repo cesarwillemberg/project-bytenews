@@ -1,0 +1,135 @@
+.article {
+    margin-top: 2%;
+}
+
+.content-of-the-subject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+    text-align: 'justify';
+}
+
+.container-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container,
+.image-container-dois {
+    margin-right: 2%;
+}
+
+.sub-container {
+    display: flex;
+}
+
+.image-container-um {
+    margin-right: 2%;
+}
+
+.image-container-um > img,
+.image-container-dois > img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+
+.text-container {
+    font-size: 26px;
+    line-height: 150%;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.tetxMargin {
+    margin-top: 1%;
+}
+
+@media (max-width: 1660px) {
+    .text-container {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .text-container {
+        font-size: 20px;
+    }
+
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .text-container {
+        font-size: 18px;
+    }
+
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1281px) {
+    .sub-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container-um,
+    .image-container-dois {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container-um > img,
+    .image-container-dois > img{
+        width: 600px;
+    }
+
+    .text-abixo-img p {
+        margin: 2% 0;
+    }
+
+    .paddingimage {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 902px) {
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container-um > img,
+    .image-container-dois > img {
+        width: 400px;
+    }
+
+}

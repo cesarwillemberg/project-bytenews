@@ -1,0 +1,111 @@
+.article {
+    margin-top: 2%;
+}
+
+.content-of-the-subject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+    text-align: 'justify';
+}
+
+.container-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-container {
+    display: flex;
+}
+
+.text-container {
+    font-size: 26px;
+    line-height: 150%;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.tetxMargin {
+    margin-left: 2%;
+}
+
+.image-container > img {
+    width: 700px;
+}
+
+.container-div h2 {
+    margin-top: 1.5%;
+    font-size: 30px;
+}
+
+.text-container-list {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+@media (max-width: 1660px) {
+}
+
+@media (max-width: 1440px) {
+    .image-container > img {
+        width: 600px;
+    }
+
+    .text-container {
+        font-size: 22px;
+    }
+
+    .container-div h2 {
+        font-size: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 1320px) {
+}
+
+@media (max-width: 1281px) {
+    .sub-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container > img {
+        width: 500px;
+    }
+
+    .tetxMargin {
+        margin-left: 0;
+        margin-top: 2%;
+    }
+
+}
+
+@media (max-width: 1025px) {
+}
+
+@media (max-width: 902px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+    .image-container > img {
+        width: 400px;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

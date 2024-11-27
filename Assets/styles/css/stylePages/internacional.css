@@ -1,3 +1,6 @@
+.article {
+    margin-top: 2%;
+}
 .content-of-the-subject{
     display: flex;
     flex-wrap: wrap;
@@ -124,4 +127,10 @@
 }
 
 @media (max-width: 480px) {
+    .image-container > img,
+    .image-container-dois > img,
+    .image-container-tres > img {
+        width: 100%;
+        min-width: 5rem;
+    }
 }
