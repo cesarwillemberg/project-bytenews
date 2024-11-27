@@ -17,6 +17,10 @@ footer {
     margin-bottom: 1%;
 }
 
+.li-links:hover {
+    text-decoration: underline;
+}
+
 .inside-hr {
     display: flex;
     justify-content: center;

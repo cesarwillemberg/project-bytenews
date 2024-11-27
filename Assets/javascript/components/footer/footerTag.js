@@ -32,6 +32,7 @@ class FooterTag extends HTMLElement {
         footerContentLinks.className = 'footer-content-links';
 
         const ulLinks = document.createElement('ul');
+        ulLinks.className = 'ul-links';
         const links = [
             { text: 'Termos de uso', href: '#' },
             { text: 'Sobre a ByteNews.com', href: '#' },
@@ -41,7 +42,9 @@ class FooterTag extends HTMLElement {
 
         links.forEach(link => {
             const li = document.createElement('li');
+            li.className = 'li-links';
             const a = document.createElement('a');
+            a.className = 'a-links';
             a.href = link.href;
             a.textContent = link.text;
             li.appendChild(a);
@@ -54,6 +57,8 @@ class FooterTag extends HTMLElement {
         socialIcons.className = 'social-icons';
 
         const ulIcons = document.createElement('ul');
+        ulIcons.className = 'ul-icons';
+
         const icons = [
             { src: '/Assets/imgs/iconeFACE.png', alt: 'Facebook', href: '#' },
             { src: '/Assets/imgs/iconeX.png', alt: 'Twitter', href: '#' },
@@ -63,7 +68,9 @@ class FooterTag extends HTMLElement {
 
         icons.forEach(icon => {
             const li = document.createElement('li');
+            li.className = 'li-icons';
             const a = document.createElement('a');
+            a.className = 'a-icons';
             a.href = icon.href;
 
             const img = document.createElement('img');

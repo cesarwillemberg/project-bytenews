@@ -29,6 +29,8 @@ class HeaderTag extends HTMLElement {
         const header = document.createElement('header');
         const divTitle = document.createElement('div');
         const h1 = document.createElement('h1');
+        const link = this.getAttribute('data-link') || '#';
+        const title = this.getAttribute('data-title') || 'ByteNews.com';
         const divIcons = document.createElement('div');
         const icons = [
             { src: '/Assets/imgs/search.png', alt: 'Buscar', id: 'searchIcon' },
@@ -40,7 +42,7 @@ class HeaderTag extends HTMLElement {
         divTitle.className = 'title';
         divIcons.className = 'icons';
 
-        h1.innerHTML = `<strong>ByteNews.com</strong>`;
+        h1.innerHTML = `<a href="${link}" style="text-decoration: none; color: inherit;"> <strong>${title}</strong></a>`;
         divTitle.appendChild(h1);
 
         icons.forEach(icon => {

@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./Assets/styles/css/style.css">
 </head>
 <body>
-    <header-tag></header-tag>
+    <header-tag
+        data-title="ByteNews.com"
+        data-link="/index.html"
+    ></header-tag>
     <navbar-tag
         data-item1="Home" data-link1="/index.html"
         data-item2="Brasil" data-link2="/pages/brasil.html"
@@ -38,6 +41,7 @@
         <section class="highlights">
             <news-card 
                 category="Brasil >" 
+                categoryLink = "/pages/brasil.html"
                 image="Assets/imgs/h1.png" 
                 imageAlt="Notícia Brasil" 
                 title="'O fogo parece estar dentro de casa, é difícil respirar': o impacto da fumaça das queimadas na saúde" 
@@ -48,6 +52,7 @@
             ></news-card>
             <news-card 
                 category="Internacional >" 
+                categoryLink = "/pages/internacional.html"
                 image="Assets/imgs/h2.png" 
                 imageAlt="Notícia Internacional" 
                 title="4 incógnitas em torno do naufrágio do iate de luxo na Itália" 
@@ -61,6 +66,7 @@
         <section class="news-grid">
             <news-category 
                 category="Tecnologia >"
+                categoryLink = "/pages/tecnologia.html"
                 image="/Assets/imgs/h3.png"
                 imageAlt="Notícia Tecnologia"
                 title="Como a China conseguiu evitar o pior do colapso tecnológico global"
@@ -71,6 +77,7 @@
         
             <news-category 
                 category="Saúde >"
+                categoryLink = "/pages/saude.html"
                 image="/Assets/imgs/h4.png"
                 imageAlt="Notícia Saúde"
                 title="Britânico é o primeiro a tomar nova vacina contra câncer no pulmão"
@@ -82,6 +89,7 @@
         
             <news-category 
                 category="Ciência >"
+                categoryLink = "/pages/ciencia.html"
                 image="/Assets/imgs/h5.png"
                 imageAlt="Notícia Ciência"
                 title="O cientista soviético que chocou o mundo com experimento que criou cães de 2 cabeças"
@@ -92,6 +100,7 @@
         
             <news-category 
                 category="Economia >"
+                categoryLink = "/pages/economia.html"
                 image="/Assets/imgs/h6.png"
                 imageAlt="Notícia Economia"
                 title="Os planos da Coreia do Norte de reabrir para turismo após 5 anos"

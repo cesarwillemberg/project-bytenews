@@ -17,6 +17,16 @@ news-card {
     margin-bottom: 2%;
 }
 
+.tag-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tag-link:hover {
+    text-decoration: underline;
+}
+
+
 .news-content-highlights {
     display: flex;
 }
@@ -39,6 +49,15 @@ news-card {
     text-align: justify;
 }
 
+.title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-link:hover {
+    text-decoration: underline;
+}
+
 .subtitle-highlights {
     font-size: 16px;
     text-align: justify;
@@ -55,13 +74,14 @@ news-card {
 }
 
 .data-hora {
-    font-size: 16px;
+    font-size: 12px;
     color: #000;
 }
 
 .time {
-    width: 5%;
-    margin-right: 5px;
+    width: 4%;
+    height: auto;
+    margin-right: .4rem;
 }
 
 @media (max-width: 1440px) {

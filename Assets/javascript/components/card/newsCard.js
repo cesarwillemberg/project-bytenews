@@ -21,7 +21,13 @@ class NewsCard extends HTMLElement {
         // Título da categoria
         const tag = document.createElement('h2');
         tag.className = 'tag-highlights';
-        tag.textContent = this.getAttribute('category') || 'Categoria >';
+
+        const linkCategory = document.createElement('a');
+        linkCategory.href = this.getAttribute('categoryLink') || '#';
+        linkCategory.textContent = this.getAttribute('category') || 'Categoria >';
+        linkCategory.className = 'tag-link';
+
+        tag.appendChild(linkCategory);
 
         // Conteúdo do card
         const content = document.createElement('div');
@@ -44,8 +50,7 @@ class NewsCard extends HTMLElement {
         const link = document.createElement('a');
         link.href = this.getAttribute('link') || '#';
         link.textContent = this.getAttribute('title') || 'Título da notícia';
-        link.style.textDecoration = 'none';
-        link.style.color = 'inherit';
+        link.className = 'title-link';
 
         title.appendChild(link);
 
