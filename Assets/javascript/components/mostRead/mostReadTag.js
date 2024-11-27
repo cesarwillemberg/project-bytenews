@@ -34,24 +34,31 @@ class MostRead extends HTMLElement {
 
         // Adicionar os itens baseados nos atributos `data-*`
         const articles = this.getArticlesData();
-        articles.forEach(({ imgSrc, alt, text }) => {
+        articles.forEach(({ imgSrc, alt, text, link }) => {
             const containerNumber = document.createElement('div');
             containerNumber.classList.add('container-number');
 
             const number = document.createElement('div');
             number.classList.add('number');
 
+            const imgLink = document.createElement('a');
+            imgLink.href = link;
+            imgLink.target = '_blank'; // Abre o link em uma nova aba
             const img = document.createElement('img');
             img.src = imgSrc;
             img.alt = alt;
             img.classList.add('article-image');
-            number.appendChild(img);
+            imgLink.appendChild(img);
 
-            const description = document.createElement('p');
-            description.textContent = text;
+            const textLink = document.createElement('a');
+            textLink.href = link;
+            
+            textLink.target = '_blank'; // Abre o link em uma nova aba
+            textLink.textContent = text;
 
+            number.appendChild(imgLink);
             containerNumber.appendChild(number);
-            containerNumber.appendChild(description);
+            containerNumber.appendChild(textLink);
             numbersMaisLidas.appendChild(containerNumber);
         });
 
@@ -70,9 +77,10 @@ class MostRead extends HTMLElement {
             const text = this.getAttribute(`data-text${i}`);
             const imgSrc = this.getAttribute(`data-imgSrc${i}`);
             const alt = this.getAttribute(`data-alt${i}`);
+            const link = this.getAttribute(`data-link${i}`) || '#'; // Usa '#' se o link não for fornecido
 
             if (text && imgSrc && alt) {
-                articles.push({ text, imgSrc, alt });
+                articles.push({ text, imgSrc, alt, link });
             }
         }
         return articles;
