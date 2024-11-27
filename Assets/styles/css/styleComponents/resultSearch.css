@@ -54,6 +54,11 @@
     text-align: justify;
 }
 
+.item-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .item-title:hover {
     text-decoration: underline;
 }

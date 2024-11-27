@@ -9,12 +9,8 @@ class ResultSearch extends HTMLElement {
         const resultSearch = this.createResultSearch();
         const styles = this.styles();
 
-        // const noResults = this.createNoResults();
-
         shadow.appendChild(styles);
         shadow.appendChild(resultSearch);
-
-        // shadow.appendChild(noResults);
 
     }
 
@@ -40,11 +36,10 @@ class ResultSearch extends HTMLElement {
         const title = document.createElement('h2');
         title.setAttribute('class', 'item-title');
 
-        // Adicionando o link ao título
         const titleLink = document.createElement('a');
         titleLink.setAttribute('class', 'item-title-link');
         titleLink.setAttribute('href', '#');
-        titleLink.textContent = 'Título';
+        // titleLink.textContent = 'Título';
         title.appendChild(titleLink);
 
 
@@ -59,12 +54,6 @@ class ResultSearch extends HTMLElement {
 
         const description = document.createElement('p');
         description.setAttribute('class', 'item-description');
-
-        // if (!this.shadowRoot.querySelector('#no_results')) {
-        //     const noResults = this.createNoResults();
-        //     items.appendChild(noResults);
-        // }
-
         
 
         
@@ -84,27 +73,15 @@ class ResultSearch extends HTMLElement {
         return divResultSearch;
     }
 
-    // createNoResults() {
-    //     const item_noresults = document.createElement('li');
-    //     item_noresults.setAttribute('id', 'no_results');
-
-    //     const no_results = document.createElement('p');
-    //     no_results.textContent = 'Nenhum resultado encontrado';
-
-    //     item_noresults.appendChild(no_results);
-
-    //     return item_noresults;
-    // }
-
     static get observedAttributes() {
-        return ['data-title', 'data-img', 'data-subtitle', 'data-item-subtitle-text', 'data-description'];
+        return ['data-title', 'data-title-link', 'data-img', 'data-subtitle', 'data-item-subtitle-text', 'data-description'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         const shadow = this.shadowRoot;
 
         if (name === 'data-title') {
-            shadow.querySelector('.item-title').textContent = newValue;
+            shadow.querySelector('.item-title-link').textContent = newValue;
         } else if (name === 'data-img') {
             shadow.querySelector('.item-image img').setAttribute('src', newValue);
         } else if (name === 'data-subtitle') {
@@ -113,6 +90,11 @@ class ResultSearch extends HTMLElement {
             shadow.querySelector('.item-subtitle-text').innerHTML = newValue
         } else if (name === 'data-description') {
             shadow.querySelector('.item-description').textContent = newValue;
+        } else if (name === 'data-title-link') {
+            console.log(newValue);
+            
+            const titleLink = shadow.querySelector('.item-title-link');
+            if (titleLink) titleLink.setAttribute('href', newValue);
         }
     }
 

@@ -266,7 +266,7 @@ class ModalComponentSearch extends HTMLElement {
                 const resultSearchComponent = document.createElement('result-search');
 
                 resultSearchComponent.setAttribute('data-title', `${result.title}`);
-                resultSearchComponent.setAttribute('data-title-link ', `${result.link}`);
+                resultSearchComponent.setAttribute('data-title-link', `${result.linkNews}`);
                 resultSearchComponent.setAttribute('data-img', `${result.imgSrc1}`);
                 resultSearchComponent.setAttribute('data-subtitle', `${result.tags}`);
                 resultSearchComponent.setAttribute('data-item-subtitle-text', `<i class="fa-regular fa-newspaper"></i>`);
