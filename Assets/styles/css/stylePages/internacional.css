@@ -1,0 +1,24 @@
+
+.article {
+    font-size: 20px;
+}
+
+.content-of-the-subject{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.container-div {
+    width: 90%;
+    display: flex;
+}
+
+.image-container {
+    margin-right: 2%;
+}

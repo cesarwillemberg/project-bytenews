@@ -1,3 +1,7 @@
+news-card {
+    width: 100%;
+}
+
 .news-category-highlights {
     width: 60%;
     height: auto;
@@ -43,6 +47,11 @@
 
 .news-content {
     text-align: justify;
+}
+
+.data-time-highlights {
+    display: flex;
+    align-items: center;
 }
 
 .data-hora {

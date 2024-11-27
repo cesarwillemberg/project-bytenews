@@ -13,11 +13,6 @@
     font-size: 25px;
 }
 
-.content-of-the-subject {
-    display: flex;
-    justify-content: center;
-}
-
 .container-div {
     width: 90%;
     display: flex;

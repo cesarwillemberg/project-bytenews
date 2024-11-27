@@ -85,7 +85,7 @@ class ModalComponent extends HTMLElement {
 
     createModalContent() {
         const modalContent = document.createElement('div');
-        modalContent.setAttribute('class', 'modal-content');
+        modalContent.setAttribute('class', 'modal-content-container');
         return modalContent;
     }
 

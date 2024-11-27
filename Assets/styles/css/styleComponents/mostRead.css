@@ -27,6 +27,7 @@
 .container-number {
     display: flex;
     width: 500px;
+    margin-right: 5%;
 }
 
 .container-number p {
@@ -34,6 +35,7 @@
     font-weight: bolder;
     margin-left: 5%;
     color: #00004F;
+    text-align: justify;
 }
 
 

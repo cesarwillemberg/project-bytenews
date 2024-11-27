@@ -10,6 +10,7 @@ class NewsCategory extends HTMLElement {
         const imageSrc = this.getAttribute('image') || '';
         const imageAlt = this.getAttribute('imageAlt') || 'Imagem da notícia';
         const title = this.getAttribute('title') || 'Título da notícia';
+        const link = this.getAttribute('link') || '#';
         const timeIcon = this.getAttribute('timeIcon') || '';
         const datetime = this.getAttribute('datetime') || '';
 
@@ -20,7 +21,11 @@ class NewsCategory extends HTMLElement {
             <div class="news-item">
                 <img src="${imageSrc}" alt="${imageAlt}" class="img-noticia">
                 <div class="news-content">
-                    <h3><strong>${title}</strong></h3>
+                    <h3>
+                        <a href="${link}" style="text-decoration: none; color: inherit;">
+                            <strong>${title}</strong>
+                        </a>
+                    </h3>
                     <img src="${timeIcon}" alt="Ícone de hora" class="time">
                     <span class="data-hora-grid">${datetime}</span>
                 </div>

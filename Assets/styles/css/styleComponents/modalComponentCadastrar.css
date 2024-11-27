@@ -26,7 +26,7 @@ button:hover {
   align-items: center;
 }
 
-.modal-content {
+.modal-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,24 +148,73 @@ input {
   animation: modalCloseSmooth 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-@media (max-width: 1440px) {}
+@media (max-width: 1440px) {
+  .modal-content-container {
+    max-height: 550px;
+    max-width: 780px;
+  }
+
+  .modal-content-container h1 {
+    margin-bottom: 0;
+  }
+
+  .icon-container {
+    height: 100px;
+  }
+
+  .icon-container img {
+    width: 100px;
+    margin: 0;
+  }
+
+  .conteinr > h2 {
+    margin: 2% 0;
+    font-size: 16px;
+  }
+
+  .conteinr form {
+    margin-top: 5%;
+  }
+
+  label {
+    font-size: 12px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 13px;
+    border-radius: 20px;
+    border: none;
+    font-size: 13px;
+  }
+
+  #bnt_submit {
+    width: 120px;
+  }
+
+
+}
+@media (max-width: 1360px) {
+
+}
 
 @media (max-width: 1281px) {}
 
 @media (max-width: 1025px) {}
 
 @media (max-width: 902px) {
-  .modal-content {
+  .modal-content-container {
     width: 700px;
   }
 
   .form-container {
     width: 450px;
   }
+
 }
 
 @media (max-width: 768px) {
-  .modal-content {
+  .modal-content-container {
     width: 700px;
   }
 
@@ -175,7 +224,7 @@ input {
 }
 
 @media (max-width: 660px) {
-  .modal-content {
+  .modal-content-container {
     width: 600px;
   }
 
@@ -185,7 +234,7 @@ input {
 }
 
 @media (max-width: 480px) {
-  .modal-content {
+  .modal-content-container {
     width: 400px;
     height: 650px;
   }

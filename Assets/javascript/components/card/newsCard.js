@@ -40,7 +40,14 @@ class NewsCard extends HTMLElement {
         // Título
         const title = document.createElement('h3');
         title.className = 'title-highlights';
-        title.innerHTML = `<strong>${this.getAttribute('title') || 'Título da notícia'}</strong>`;
+        
+        const link = document.createElement('a');
+        link.href = this.getAttribute('link') || '#';
+        link.textContent = this.getAttribute('title') || 'Título da notícia';
+        link.style.textDecoration = 'none';
+        link.style.color = 'inherit';
+
+        title.appendChild(link);
 
         // Subtítulo
         const subtitle = document.createElement('p');
